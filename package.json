@@ -2,12 +2,12 @@
   "name": "express-middleware",
   "version": "1.0.0",
   "description": "An express middleware function that parses incoming JSON.",
-  "main": "app.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "start": "node app",
+    "start": "node index",
     "test": "mocha",
     "dev": "mocha -w"
   },
