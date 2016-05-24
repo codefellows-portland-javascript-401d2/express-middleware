@@ -1,11 +1,16 @@
 
-module.exports = function(req, res, next) {
+function parser (req, res, next) {
+
   req.on('data', (data) => {
-    req.body = JSON.parse(data);
-    if(!(typeof req.body === 'object')) {
+    try {
+      req.body = JSON.parse(data);
+      next();
+    } catch (e) {
       res.status(400).send({error: 'Invalid JSON'});
-      res.end();
     }
-    next();
+
+
   });
 };
+
+module.exports = parser;
