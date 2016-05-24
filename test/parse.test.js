@@ -39,9 +39,22 @@ describe ( 'Body Parser Middleware', () => {
       // expect(error).to.equal('400 Invalid JSON');
       assert.equal(error, '400 Invalid JSON');
     });
-
   });
 
+  describe('Checking the POST request', () => {
+    it('should respond with {"pet": "dog"}', (done) => {
+      request('localhost:8080')
+        .post('/')
+        .send('{"pet": "dog"}')
+        .end((err,res) => {
+          if (err) throw err;
+          expect(res.body).to.have.a.property('pet');
+          expect(res.body).to.be.an('object');
+          expect(res.body).to.eql({pet: 'dog'});
+          // assert.equal(res.body, ({pet: 'dog'}));
 
-
+          done();
+        });
+    });
+  });
 });
