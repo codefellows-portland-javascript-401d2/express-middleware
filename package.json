@@ -1,25 +1,36 @@
 {
-  "name": "http-simple-persistence",
+  "name": "express-middleware",
   "version": "1.0.0",
-  "description": "![cf](http://i.imgur.com/7v5ASc8.png) http-simple-persistence ====",
+  "description": "![cf](http://i.imgur.com/7v5ASc8.png) express-middleware ====",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "mocha",
-    "dev": "mocha -w"
+    "dev": "gulp",
+    "test": "gulp test",
+    "start": "nodemon server.js",
+    "lint": "gulp lint"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codefellows-portland-javascript-401d2/http-simple-persistence.git"
+    "url": "git+https://github.com/YvonneHayes/express-middleware.git"
   },
-  "author": "Marty Nelson <marty@martypdx.com> (@martypdx)",
+  "author": "Yvonne Hayes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/codefellows-portland-javascript-401d2/http-simple-persistence/issues"
+    "url": "https://github.com/YvonneHayes/express-middleware/issues"
   },
-  "homepage": "https://github.com/codefellows-portland-javascript-401d2/http-simple-persistence#readme",
+  "homepage": "https://github.com/YvonneHayes/express-middleware#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
-    "mocha": "^2.4.5"
+    "eslint": "^2.10.2",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-spawn-mocha": "^2.2.2",
+    "mocha": "^2.5.2",
+    "nodemon": "^1.9.2"
   }
 }
