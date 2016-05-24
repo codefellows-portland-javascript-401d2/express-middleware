@@ -1,23 +1,8 @@
 const express = require('express');
 const app = express();
+const parser = require('./parser');
 
-app.use((req, res, next) => {
-  var body = '';
-  req.on('data', (chunk) => {
-    body += chunk;
-  });
-
-  req.on('end', () => {
-    try {
-      var parsed = JSON.parse(body.toString());
-      req.body = parsed;
-      next();
-    }
-    catch(err){
-      next(err);
-    }
-  });
-});
+app.use(parser());
 
 app.post('/', (req, res) => {
   res.body = req.body;
