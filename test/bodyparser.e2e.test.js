@@ -5,8 +5,6 @@ const assert = chai.assert;
 chai.use(chaihttp);
 const request = chai.request(app);
 
-
-
 function getJsonData() {
   return JSON.stringify(
     {
@@ -22,8 +20,8 @@ describe ('bodyparser e2e', () => {
         .post('/test')
         .send(getJsonData())
         .end( (err, data) => {
-          let result = JSON.parse(data);
           if (err) assert.fail;
+          let result = JSON.parse(data);
           assert.isObject(result);
           assert.property(result, 'number');
         });
@@ -38,6 +36,5 @@ describe ('bodyparser e2e', () => {
           assert.equal(result, 'invalid JSON');
         });
     });
-
   });
 });
