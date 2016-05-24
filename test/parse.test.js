@@ -27,6 +27,19 @@ describe ( 'Body Parser Middleware', () => {
       // assert.equal(req.body, ({pet: 'dog'}));
     });
 
+    it('if it\'s not JSON it should return invalid error', () => {
+      req = {body: '', data: '{"pet": "dog"}'};
+      function parse(obj){
+        obj.body = obj.data;
+        if(!(typeof req.body === 'object')) {
+          error = '400 Invalid JSON';
+        }
+      }
+      parse(req);
+      // expect(error).to.equal('400 Invalid JSON');
+      assert.equal(error, '400 Invalid JSON');
+    });
+
   });
 
 
