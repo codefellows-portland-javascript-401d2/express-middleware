@@ -1,0 +1,31 @@
+{
+  "name": "express-middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DonChatelain/express-middleware.git"
+  },
+  "author": "Don Chatelain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DonChatelain/express-middleware/issues"
+  },
+  "homepage": "https://github.com/DonChatelain/express-middleware#readme",
+  "devDependencies": {
+    "mocha": "^2.5.2",
+    "nodemon": "^1.9.2"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
