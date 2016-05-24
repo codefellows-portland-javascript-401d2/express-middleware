@@ -1,18 +1,18 @@
 {
-  "name": "http-simple-persistence",
+  "name": "bodyparser-test",
   "version": "1.0.0",
   "description": "![cf](http://i.imgur.com/7v5ASc8.png) http-simple-persistence ====",
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
-    "dev": ""
+    "dev": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codefellows-portland-javascript-401d2/http-simple-persistence.git"
   },
-  "author": "Marty Nelson <marty@martypdx.com> (@martypdx)",
-  "license": "ISC",
+  "author": "David Goodwin <goodwid@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/codefellows-portland-javascript-401d2/http-simple-persistence/issues"
   },

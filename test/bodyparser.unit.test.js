@@ -12,11 +12,11 @@ function getJsonData() {
 
 function getMockRes() {
   return {
-    send(s) { this.out = s; },
     status(c) {
       this.code = c;
       return this;
-    }
+    },
+    send(s) { this.out = s; }
   };
 }
 
