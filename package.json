@@ -4,8 +4,8 @@
   "description": "![cf](http://i.imgur.com/7v5ASc8.png) http-simple-persistence ====",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "dev": "mocha -w"
+    "test": "gulp test",
+    "dev": ""
   },
   "repository": {
     "type": "git",
@@ -20,10 +20,10 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
-    "mocha": "^2.4.5",
     "eslint": "^2.10.2",
     "gulp": "^3.9.1",
     "gulp-eslint": "^2.0.0",
-    "gulp-mocha": "^2.2.0"
+    "gulp-spawn-mocha": "^2.2.2",
+    "mocha": "^2.4.5"
   }
 }

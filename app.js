@@ -5,5 +5,5 @@ const bp = require ('./lib/bodyparser');
 app.use(bp.json);
 
 app.post('/test', (req, res) => {
-	res.send(req.body);
+  res.send(req.body);
 });

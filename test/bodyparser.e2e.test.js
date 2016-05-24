@@ -21,10 +21,11 @@ describe ('bodyparser e2e', () => {
       request
         .post('/test')
         .send(getJsonData())
-        .end( (err, result) => {
+        .end( (err, data) => {
+          let result = JSON.parse(data);
           if (err) assert.fail;
-          assert.isJson(result);
-          assert.property(JSON.parse(result), 'number');
+          assert.isObject(result);
+          assert.property(result, 'number');
         });
     });
 
