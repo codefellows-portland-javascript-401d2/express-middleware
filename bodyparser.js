@@ -5,8 +5,7 @@ bodyParser.parse = function(req, res, next) {
   req.on('data', chunk => {
     body += chunk;
   }); 
-  req.on('end', (err) => {
-    if (err) return callback(err);
+  req.on('end', () => {
     if (bodyParser.isJSON(body)) {
       req.body = JSON.parse(body);
       next();
