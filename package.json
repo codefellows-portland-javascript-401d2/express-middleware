@@ -4,7 +4,9 @@
   "description": "Body parser assignment",
   "main": "server.js",
   "scripts": {
-    "test": "mocha"
+    "test": "npm run unit-test && npm run lint",
+    "unit-test": "mocha",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",

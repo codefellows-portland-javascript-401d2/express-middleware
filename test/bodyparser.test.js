@@ -20,8 +20,12 @@ describe('Bodyparser Module Test', () => {
       done();
     };
 
-    // This is direct access to the POST route handler
-    var handler = bodyparser.stack[1].route.stack[0].handle;
+    // Finds the handler for the POST route with path as '/*'
+    var handler = bodyparser.stack.find( e => {
+      return (e.route.methods.post === true) && (e.route.path === '/*');
+    })
+      .route.stack[0].handle;
+
     handler(req, res, next);
 
     req.emit('data', jsonObj);
@@ -36,8 +40,12 @@ describe('Bodyparser Module Test', () => {
       done();
     };
 
-    // This is direct access to the POST route handler
-    var handler = bodyparser.stack[1].route.stack[0].handle;
+    // Finds the handler for the POST route with path as '/*'
+    var handler = bodyparser.stack.find( e => {
+      return (e.route.methods.post === true) && (e.route.path === '/*');
+    })
+    .route.stack[0].handle;
+
     handler(req, res, next);
 
     req.emit('data', jsonBrokenObj);
@@ -51,8 +59,12 @@ describe('Bodyparser Module Test', () => {
       done();
     };
 
-    // This is direct access to the GET route handler
-    var handler = bodyparser.stack[0].route.stack[0].handle;
+    // Finds the handler for the GET route with path as '/*'
+    var handler = bodyparser.stack.find( e => {
+      return (e.route.methods.get === true) && (e.route.path === '/*');
+    })
+    .route.stack[0].handle;
+
     handler(req, res, next);
   });
 
