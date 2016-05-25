@@ -62,7 +62,7 @@ describe('Body Parser Unit Test', () => {
 describe('Body Parser E2E Test', () => {
   chai.use(chaiHttp);
 
-  let request = chai.request(app.listen(8080));
+  let request = chai.request(app);
   let bodyObject = {
     key: 'value'
   };
