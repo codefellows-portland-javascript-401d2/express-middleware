@@ -4,7 +4,7 @@ const app = express();
 
 app.use(bodyParser.json);
 
-app.all('/', (request, response, next) => {
+app.all('/', (request, response) => {
   response
     .send({
       status: 'success',
