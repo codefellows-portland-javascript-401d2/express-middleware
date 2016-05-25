@@ -1,7 +1,6 @@
 const chai = require('chai');
 const chaihttp = require('chai-http');
 const app = require('../lib/app');
-// const server = require('../server');
 const assert = chai.assert;
 
 chai.use(chaihttp);
@@ -47,7 +46,7 @@ describe('End to End Test', () => {
 
   describe('Get', () => {
 
-    it('With any GET request, returns a helpful error message', done => {
+    it('With any GET request, returns a helpful message', done => {
       request
       .get('/')
       .end((err, res) => {
