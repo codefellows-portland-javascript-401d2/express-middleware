@@ -10,7 +10,7 @@ const Event = require( 'events');
 
 
 
-describe ( 'Body Parser Middleware', () => {
+describe ( 'Unit tests', () => {
 
   describe('Parsing the json object', () => {
 
@@ -40,13 +40,12 @@ describe ( 'Body Parser Middleware', () => {
       };
       parse(req, res, ()=>{});
       req.emit('data', data);
-      // expect(error).to.equal('400 Invalid JSON');
       assert.equal(res.code, '400');
       assert.deepEqual(res.msg, {error: 'Invalid JSON'});
     });
   });
 
-  describe('Checking the POST request', () => {
+  describe('E2E test - Checking the POST request', () => {
     it('should respond with {"pet": "dog"}', (done) => {
       request('localhost:8080')
         .post('/')
@@ -56,8 +55,6 @@ describe ( 'Body Parser Middleware', () => {
           expect(res.body).to.have.a.property('pet');
           expect(res.body).to.be.an('object');
           expect(res.body).to.eql({pet: 'dog'});
-          // assert.equal(res.body, ({pet: 'dog'}));
-
           done();
         });
     });

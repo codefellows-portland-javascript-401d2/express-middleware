@@ -1,8 +1,12 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) express-middleware
 ====
 
-Lab assignment instructions are located [here](LAB.md)
+## JSON to plain txt 
 
-Remember to add _your_ .eslintrc file!
+In the parse.js file you will find a body-parser. This is a middleware for Express.JS that parses incoming JSON data and converts it to plain text.
 
-Replace contents of `README.md` with your proper developer focused project instructions.
+## Tests
+```
+npm install
+npm test
+```
