@@ -1,26 +1,21 @@
-const http = require( 'http' );
-const Store = require( './lib/store' );
-const store = new Store();
+const express = require('express');
+const app = express();
+const parser = require('./parser');
 
-const router = require( './lib/router' )();
+app.use(parser());
 
-router
-	.get( '/archangels', ( req, res ) => {
-		let id = req.url.replace( '/archangels/', '' );
-		res.writeHead( 200, { 'Content-Type': 'application/json' } );
-		res.write( JSON.stringify( store.get( id ) ) );
-		res.end();
-	})
-	.post( '/archangels', ( req, res ) => {
-		let body = '';
-		req.on( 'data', chunk => body += chunk );
-		req.on( 'end', () => {
-			res.writeHead( 200, { 'Content-Type': 'application/json' } );
-			const angel = JSON.parse( body );
-			store.add( angel );
-			res.write( JSON.stringify( angel ) );
-			res.end();
-		});		
-	});
-	
-module.exports = http.createServer( router.routes() );
+app.post('/', (req, res) => {
+  res.body = req.body;
+  res.send(res.body);
+});
+
+app.put('/', (req, res) => {
+  res.body = req.body;
+  res.send(res.body);
+});
+
+app.use((err, req, res, next) =>{
+  res.status(400).send('invalid json');
+});
+
+module.exports = app;

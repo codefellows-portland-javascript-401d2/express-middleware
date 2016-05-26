@@ -1,8 +1,3 @@
-![cf](http://i.imgur.com/7v5ASc8.png) express-middleware
-====
+##express-middleware
 
-Lab assignment instructions are located [here](LAB.md)
-
-Remember to add _your_ .eslintrc file!
-
-Replace contents of `README.md` with your proper developer focused project instructions.
+Parser middleware takes the body of an http POST/PUT req, parses the body as valid JSON, and sends to http response. Includes error handling in case of invalid JSON. 
