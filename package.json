@@ -1,18 +1,18 @@
 {
-  "name": "http-simple-persistence",
+  "name": "bodyparser-test",
   "version": "1.0.0",
   "description": "![cf](http://i.imgur.com/7v5ASc8.png) http-simple-persistence ====",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "dev": "mocha -w"
+    "test": "gulp test",
+    "dev": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codefellows-portland-javascript-401d2/http-simple-persistence.git"
   },
-  "author": "Marty Nelson <marty@martypdx.com> (@martypdx)",
-  "license": "ISC",
+  "author": "David Goodwin <goodwid@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/codefellows-portland-javascript-401d2/http-simple-persistence/issues"
   },
@@ -20,6 +20,13 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
+    "eslint": "^2.10.2",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-spawn-mocha": "^2.2.2",
     "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   }
 }
