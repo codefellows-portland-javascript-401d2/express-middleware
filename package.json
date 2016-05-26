@@ -1,25 +1,32 @@
 {
-  "name": "http-simple-persistence",
+  "name": "express-middleware",
   "version": "1.0.0",
-  "description": "![cf](http://i.imgur.com/7v5ASc8.png) http-simple-persistence ====",
+  "description": "An express middleware function that parses incoming JSON.",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
+    "start": "node index",
     "test": "mocha",
     "dev": "mocha -w"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codefellows-portland-javascript-401d2/http-simple-persistence.git"
+    "url": "git+https://github.com/jluangphasy/express-middleware.git"
   },
-  "author": "Marty Nelson <marty@martypdx.com> (@martypdx)",
+  "author": "Johnny Luangphasy (https://github.com/jluangphasy)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/codefellows-portland-javascript-401d2/http-simple-persistence/issues"
+    "url": "https://github.com/jluangphasy/express-middleware/issues"
   },
-  "homepage": "https://github.com/codefellows-portland-javascript-401d2/http-simple-persistence#readme",
+  "homepage": "https://github.com/jluangphasy/express-middleware#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
-    "mocha": "^2.4.5"
+    "mocha": "^2.5.2"
   }
 }

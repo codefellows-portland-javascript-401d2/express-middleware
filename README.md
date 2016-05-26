@@ -1,8 +1,11 @@
-![cf](http://i.imgur.com/7v5ASc8.png) express-middleware
-====
+# ![cf](http://i.imgur.com/7v5ASc8.png) Express Middleware
 
-Lab assignment instructions are located [here](LAB.md)
+An express middleware function that parses incoming JSON. On a successful parse, the JSON object will be saved to `req.body`. On a failed parse, the middleware will send back the appropriate status code and a message of "invalid json".
 
-Remember to add _your_ .eslintrc file!
+## Getting Started
 
-Replace contents of `README.md` with your proper developer focused project instructions.
+1. Install [Node.js](https://nodejs.org/en/).
+2. Run `git clone https://github.com/jluangphasy/express-middleware.git`.
+3. Run `cd express-middleware`.
+4. Run `npm install`.
+5. Run `npm start`.
