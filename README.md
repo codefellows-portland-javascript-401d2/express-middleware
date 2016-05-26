@@ -1,8 +1,15 @@
-![cf](http://i.imgur.com/7v5ASc8.png) express-middleware
-====
+## HTTP Server with a bodyparser module
 
-Lab assignment instructions are located [here](LAB.md)
+##### To install, clone this repo then run
 
-Remember to add _your_ .eslintrc file!
+    npm install
+    node server.js
 
-Replace contents of `README.md` with your proper developer focused project instructions.
+    The server will be listening on port 8080 by default.
+
+##### Body parser
+
+    POST requests to any path with a valid JSON body will be parsed to an object.
+
+    Requests with any other method will result in an error message.
+    Requests with a invalid JSON body will result in an error message.
