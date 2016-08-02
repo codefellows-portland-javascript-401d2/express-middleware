@@ -1,0 +1,32 @@
+{
+  "name": "express-middleware",
+  "version": "1.0.0",
+  "description": "An express middleware function that parses incoming JSON.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node index",
+    "test": "mocha",
+    "dev": "mocha -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jluangphasy/express-middleware.git"
+  },
+  "author": "Johnny Luangphasy (https://github.com/jluangphasy)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jluangphasy/express-middleware/issues"
+  },
+  "homepage": "https://github.com/jluangphasy/express-middleware#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^2.5.2"
+  }
+}
